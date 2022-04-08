@@ -22,11 +22,11 @@ int main()
        for(int i=0; i<n ; i++)
      cin>>array[i];
      cin>>key;
-     int c=linearsearch(array,n,key);
-    if(c==-1)
-      cout<<"key not found";
+     int comparsion=linearsearch(array,n,key);
+    if(comparsion==-1)
+      cout<<"not present "<<n;
       else
-      cout<<"key found at "<<c;
+      cout<<"present "<<comparsion;
     }
     else
     {
