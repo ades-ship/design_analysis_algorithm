@@ -1,6 +1,31 @@
 #include<iostream>
 using namespace std;
-int main()
+int binary_search(int arr[],int l,int r,int key)
 {
+    while(l<=r)
+    {
+    int mid=l+(r-l)/2;
+     if(arr[mid]==key)  return mid;
+    else if(arr[mid]<key) l=mid+1;
+    else
+     r=mid-1;
+    }
+     return -1;
+}
+int main()
+{  
+    int n,key;
+    cin>>n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin>>arr[i];
+    }
+   cin>>key;
+   int c=binary_search(arr,0,n-1,key);
+    if(c!=-1)
+   cout<<"present\n";
+   else
+   cout<<"not present\n";
     return 0;
 }
