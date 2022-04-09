@@ -1,7 +1,7 @@
 #include<iostream>
 #include <bits/stdc++.h>
 using namespace std;
-int comparsion=1;
+int comparsion=1;  // for number of comparsion
 int binarysearch(int arr[],int l, int r, int key)
 {   
     if(l<=r)
