@@ -1,4 +1,5 @@
 #include<iostream>
+int comparsion=0;
 using namespace std;
 int binary_search(int arr[],int l,int r,int key)
 {
@@ -9,6 +10,7 @@ int binary_search(int arr[],int l,int r,int key)
     else if(arr[mid]<key) l=mid+1;
     else
      r=mid-1;
+     comparsion++;
     }
      return -1;
 }
@@ -24,8 +26,8 @@ int main()
    cin>>key;
    int c=binary_search(arr,0,n-1,key);
     if(c!=-1)
-   cout<<"present\n";
+   cout<<"present "<<comparsion;
    else
-   cout<<"not present\n";
+   cout<<"not present "<<comparsion;
     return 0;
 }
